@@ -1,0 +1,133 @@
+:root {
+    --primaryBrandIris: #4D5AE5; /* IRIS */
+    --pressedStateOcean: #404BBF; /* OCEAN */
+    --darkNavyBlue: #2E2F47; /* NAVY BLUE */
+    --successGreen: #31D0AA; /* GREEN */
+    --textSlate: #434455; /* SLATE */
+    --subtleTextLightSlate: #9EBF99; /* LIGHT SLATE */
+    --accentCornflower: #E7E9FC; /* CORNFLOWER */
+    --lightCloud: #F4F4FD; /* CLOUD */
+    --modalOverlayNavyBlueModal: #2E2F47; /* NAVY BLUE MODAL */
+    --grey: #2E2F47; /* GREY */
+    --dairy: #FCFCFC; /* DAIRY */
+}
+
+/* General styles */
+body {
+    font-family: Roboto sans-serif;
+    color: var(--textSlate);
+    background-color: white;
+    font-size: 16px;
+    line-height: 1.5; /* 24px / 16px */
+    letter-spacing: 0.32px; /* 2% */
+    font-weight: 400;
+
+    li {
+        list-style-type: none;
+    }
+
+    a {
+        text-decoration: none;
+        color: currentColor;
+    }
+}
+
+.title {
+    font-size: 56px;
+    line-height: 1.07; /* 60px / 56px */
+    letter-spacing: 1.12px; /* 2% */
+    font-weight: 700;
+    color: white;
+}
+
+.header2 {
+    font-size: 36px;
+    line-height: 1.11; /* 40px / 36px */
+    letter-spacing: 0.72px; /* 2% */
+    font-weight: 700;
+    color: var(--darkNavyBlue);
+}
+
+.header3 {
+    font-size: 20px;
+    line-height: 1.2; /* 24px / 20px */
+    letter-spacing: 0.4px; /* 2% */
+    font-weight: 500;
+    color: var(--darkNavyBlue);
+}
+
+.small-text {
+    font-size: 12px;
+    line-height: 1.17; /* 14px / 12px */
+    letter-spacing: 0.48px; /* 4% */
+    color: var(--subtleTextLightSlate);
+}
+
+.medium-text {
+    font-weight: 500;
+}
+
+.button {
+    letter-spacing: 0.64px; /* 4% */
+    font-weight: 500;
+    color: white;
+    text-transform: uppercase;
+    background-color: var(--primaryBrandIris);
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: var(--pressedStateOcean);
+}
+
+.link {
+    font-size: 12px;
+    line-height: 1.33; /* 16px / 12px */
+    letter-spacing: 0.48px; /* 4% */
+    color: var(--primaryBrandIris);
+    text-decoration: underline;
+}
+
+.logo {
+    font-family: Raleway, serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.17; /* 21px / 18px */
+    letter-spacing: 0.54px; /* 3% */
+    font-style: normal;
+    span {
+        color: var(--primaryBrandIris);
+    }
+}
+
+/* Block-specific styles */
+.header {
+    .logo {
+        color: var(--darkNavyBlue);
+    }
+    a:hover {
+        color: var(--pressedStateOcean);
+    }
+
+    a:active {
+        text-decoration: underline;
+    }
+}
+.hero {
+    background-color: var(--darkNavyBlue);
+    text-align: center;
+}
+
+.team {
+    background-color: var(--lightCloud);
+}
+
+.footer {
+    background-color: var(--darkNavyBlue);
+    color: var(--lightCloud);
+}
+
+.list > .item {
+    display: inline-block;
+}
