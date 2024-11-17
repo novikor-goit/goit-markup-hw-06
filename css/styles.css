@@ -1,7 +1,21 @@
+:root {
+  --primaryBrandIris: #4d5ae5; /* IRIS */
+  --pressedStateOcean: #404bbf; /* OCEAN */
+  --darkNavyBlue: #2e2f42; /* NAVY BLUE */
+  --successGreen: #31d0aa; /* GREEN */
+  --textSlate: #434455; /* SLATE */
+  --subtleTextLightSlate: #9ebf99; /* LIGHT SLATE */
+  --accentCornflower: #e7e9fc; /* CORNFLOWER */
+  --lightCloud: #f4f4fd; /* CLOUD */
+  --modalOverlayNavyBlueModal: #2e2f47; /* NAVY BLUE MODAL */
+  --grey: #2e2f47; /* GREY */
+  --dairy: #fcfcfc; /* DAIRY */
+}
+
 /* General styles */
 body {
   font-family: "Roboto", sans-serif;
-  color: #434455; /* SLATE */
+  color: var(--textSlate); /* SLATE */
   background-color: white;
   font-size: 16px;
   line-height: 1.5; /* 24px / 16px */
@@ -28,7 +42,7 @@ body {
 
 .header-two,
 .header-three {
-  color: #2e2f42; /* NAVY BLUE */
+  color: var(--darkNavyBlue); /* NAVY BLUE */
   text-align: center;
   text-transform: capitalize;
 }
@@ -49,7 +63,7 @@ body {
   font-size: 12px;
   line-height: 1.17; /* 14px / 12px */
   letter-spacing: 0.48px; /* 4% */
-  color: #9ebf99; /* LIGHT SLATE */
+  color: var(--subtleTextLightSlate); /* LIGHT SLATE */
 }
 
 .medium-text {
@@ -61,7 +75,7 @@ body {
   font-weight: 500;
   color: white;
   text-transform: uppercase;
-  background-color: #4d5ae5; /* IRIS */
+  background-color: var(--primaryBrandIris); /* IRIS */
   cursor: pointer;
   line-height: 1.5;
 }
@@ -70,7 +84,7 @@ body {
   font-size: 12px;
   line-height: 1.33; /* 16px / 12px */
   letter-spacing: 0.48px; /* 4% */
-  color: #4d5ae5; /* IRIS */
+  color: var(--primaryBrandIris); /* IRIS */
   text-decoration: underline;
 }
 
@@ -83,42 +97,42 @@ body {
   letter-spacing: 0.54px; /* 3% */
   font-style: normal;
   text-transform: uppercase;
-  color: #4d5ae5; /* IRIS */
+  color: var(--primaryBrandIris); /* IRIS */
 }
 .background-white {
   background-color: white;
 }
 .background-ocean:hover,
 .background-ocean:focus {
-  background-color: #404bbf; /* OCEAN */
+  background-color: var(--pressedStateOcean); /* OCEAN */
 }
 .hover-ocean:hover,
 .hover-ocean:focus {
-  color: #404bbf; /* OCEAN */
+  color: var(--pressedStateOcean); /* OCEAN */
 }
 .slate {
-  color: #434455; /* SLATE */
+  color: var(--textSlate); /* SLATE */
 }
 .cloud {
-  color: #f4f4fd; /* CLOUD */
+  color: var(--lightCloud); /* CLOUD */
 }
 /* Block-specific styles */
 .navy-blue {
-  color: #2e2f42; /* NAVY BLUE */
+  color: var(--darkNavyBlue); /* NAVY BLUE */
 }
 .contact {
   font-style: normal;
 }
 
 .hero {
-  background-color: #2e2f42; /* NAVY BLUE */
+  background-color: var(--darkNavyBlue); /* NAVY BLUE */
   text-align: center;
 }
 
 .team {
-  background-color: #f4f4fd; /* CLOUD */
+  background-color: var(--lightCloud); /* CLOUD */
 }
 
 .footer {
-  background-color: #2e2f42; /* NAVY BLUE */
+  background-color: var(--darkNavyBlue); /* NAVY BLUE */
 }
