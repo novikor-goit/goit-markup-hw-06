@@ -66,10 +66,6 @@ body {
   line-height: 1.5;
 }
 
-.button:hover {
-  background-color: #404bbf; /* OCEAN */
-}
-
 .link {
   font-size: 12px;
   line-height: 1.33; /* 16px / 12px */
@@ -89,26 +85,21 @@ body {
   text-transform: uppercase;
   color: #4d5ae5; /* IRIS */
 }
-
+.hover-ocean:hover,
+.hover-ocean:active {
+  color: #404bbf; /* OCEAN */
+}
+.slate {
+  color: #434455; /* SLATE */
+}
+.cloud {
+  color: #f4f4fd; /* CLOUD */
+}
 /* Block-specific styles */
+.navy-blue {
+  color: #2e2f42; /* NAVY BLUE */
+}
 .header {
-  .logo > span {
-    color: #2e2f42; /* NAVY BLUE */
-  }
-
-  .navigation {
-    > .medium-text {
-      color: #2e2f42; /* NAVY BLUE */
-    }
-    a:hover {
-      color: #404bbf; /* OCEAN */
-    }
-
-    a:active {
-      color: #404bbf; /* OCEAN */
-      text-decoration: underline;
-    }
-  }
   .contact {
     font-style: normal;
   }
@@ -128,9 +119,4 @@ body {
 
 .footer {
   background-color: #2e2f42; /* NAVY BLUE */
-  color: #f4f4fd; /* CLOUD */
-
-  .logo > span {
-    color: #f4f4fd; /* CLOUD */
-  }
 }
