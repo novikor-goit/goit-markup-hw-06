@@ -1,21 +1,7 @@
-:root {
-  --primaryBrandIris: #4d5ae5; /* IRIS */
-  --pressedStateOcean: #404bbf; /* OCEAN */
-  --darkNavyBlue: #2e2f42; /* NAVY BLUE */
-  --successGreen: #31d0aa; /* GREEN */
-  --textSlate: #434455; /* SLATE */
-  --subtleTextLightSlate: #9ebf99; /* LIGHT SLATE */
-  --accentCornflower: #e7e9fc; /* CORNFLOWER */
-  --lightCloud: #f4f4fd; /* CLOUD */
-  --modalOverlayNavyBlueModal: #2e2f47; /* NAVY BLUE MODAL */
-  --grey: #2e2f47; /* GREY */
-  --dairy: #fcfcfc; /* DAIRY */
-}
-
 /* General styles */
 body {
   font-family: "Roboto", sans-serif;
-  color: var(--textSlate);
+  color: #434455; /* SLATE */
   background-color: white;
   font-size: 16px;
   line-height: 1.5; /* 24px / 16px */
@@ -42,7 +28,7 @@ body {
 
 .header-two,
 .header-three {
-  color: var(--darkNavyBlue);
+  color: #2e2f42; /* NAVY BLUE */
   text-align: center;
   text-transform: capitalize;
 }
@@ -63,7 +49,7 @@ body {
   font-size: 12px;
   line-height: 1.17; /* 14px / 12px */
   letter-spacing: 0.48px; /* 4% */
-  color: var(--subtleTextLightSlate);
+  color: #9ebf99; /* LIGHT SLATE */
 }
 
 .medium-text {
@@ -75,20 +61,20 @@ body {
   font-weight: 500;
   color: white;
   text-transform: uppercase;
-  background-color: var(--primaryBrandIris);
+  background-color: #4d5ae5; /* IRIS */
   cursor: pointer;
   line-height: 1.5;
 }
 
 .button:hover {
-  background-color: var(--pressedStateOcean);
+  background-color: #404bbf; /* OCEAN */
 }
 
 .link {
   font-size: 12px;
   line-height: 1.33; /* 16px / 12px */
   letter-spacing: 0.48px; /* 4% */
-  color: var(--primaryBrandIris);
+  color: #4d5ae5; /* IRIS */
   text-decoration: underline;
 }
 
@@ -101,50 +87,50 @@ body {
   letter-spacing: 0.54px; /* 3% */
   font-style: normal;
   text-transform: uppercase;
-  color: var(--primaryBrandIris);
+  color: #4d5ae5; /* IRIS */
 }
 
 /* Block-specific styles */
 .header {
   .logo > span {
-    color: var(--darkNavyBlue);
+    color: #2e2f42; /* NAVY BLUE */
   }
 
   .navigation {
     > .medium-text {
-      color: red var(--darkNavyBlue);
+      color: #2e2f42; /* NAVY BLUE */
     }
     a:hover {
-      color: var(--pressedStateOcean);
+      color: #404bbf; /* OCEAN */
     }
 
     a:active {
-      color: var(--pressedStateOcean);
+      color: #404bbf; /* OCEAN */
       text-decoration: underline;
     }
   }
-  address {
+  .contact {
     font-style: normal;
   }
 }
 
 .hero {
-  background-color: var(--darkNavyBlue);
+  background-color: #2e2f42; /* NAVY BLUE */
   text-align: center;
 }
 
 .team {
-  background-color: var(--lightCloud);
+  background-color: #f4f4fd; /* CLOUD */
   .list > .item {
     background-color: white;
   }
 }
 
 .footer {
-  background-color: var(--darkNavyBlue);
-  color: var(--lightCloud);
+  background-color: #2e2f42; /* NAVY BLUE */
+  color: #f4f4fd; /* CLOUD */
 
   .logo > span {
-    color: var(--lightCloud);
+    color: #f4f4fd; /* CLOUD */
   }
 }
