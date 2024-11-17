@@ -85,8 +85,15 @@ body {
   text-transform: uppercase;
   color: #4d5ae5; /* IRIS */
 }
+.background-white {
+  background-color: white;
+}
+.background-ocean:hover,
+.background-ocean:focus {
+  background-color: #404bbf; /* OCEAN */
+}
 .hover-ocean:hover,
-.hover-ocean:active {
+.hover-ocean:focus {
   color: #404bbf; /* OCEAN */
 }
 .slate {
@@ -99,10 +106,8 @@ body {
 .navy-blue {
   color: #2e2f42; /* NAVY BLUE */
 }
-.header {
-  .contact {
-    font-style: normal;
-  }
+.contact {
+  font-style: normal;
 }
 
 .hero {
@@ -112,9 +117,6 @@ body {
 
 .team {
   background-color: #f4f4fd; /* CLOUD */
-  .list > .item {
-    background-color: white;
-  }
 }
 
 .footer {
