@@ -12,6 +12,56 @@
   --dairy: #fcfcfc; /* DAIRY */
 }
 
+html,
+body,
+header,
+div,
+ul,
+li,
+span,
+a,
+img,
+address,
+button,
+h1,
+h2,
+h3,
+footer {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+p,
+a {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: currentColor;
+}
+
+button {
+  all: unset;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+address {
+  font-style: normal;
+}
+
+img {
+  display: block;
+}
+
 body {
   font-family: "Roboto", sans-serif;
   color: var(--textSlate); /* SLATE */
@@ -20,56 +70,6 @@ body {
   line-height: 1.5;
   letter-spacing: 0.32px; /* 2% */
   font-weight: 400;
-
-  html,
-  body,
-  header,
-  div,
-  ul,
-  li,
-  span,
-  a,
-  img,
-  address,
-  button,
-  h1,
-  h2,
-  h3,
-  footer {
-    margin: 0;
-    padding: 0;
-    border: 0;
-  }
-
-  ul,
-  ol,
-  li,
-  dl,
-  dt,
-  dd,
-  p,
-  a {
-    list-style: none;
-  }
-
-  a {
-    text-decoration: none;
-    color: currentColor;
-  }
-
-  button {
-    all: unset;
-    font-family: inherit;
-    cursor: pointer;
-  }
-
-  address {
-    font-style: normal;
-  }
-
-  img {
-    display: block;
-  }
 }
 
 .title {
@@ -196,7 +196,7 @@ body {
 .container {
   width: 1158px;
   margin: 0 auto;
-  padding: 0 15px;
+  padding: 0 15px 0 15px;
 }
 
 .header {
