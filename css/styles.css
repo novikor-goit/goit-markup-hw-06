@@ -146,6 +146,7 @@ body {
   text-transform: uppercase;
   color: var(--primaryBrandIris); /* IRIS */
   margin-right: 76px;
+  padding: 24px 0;
 }
 
 .background-white {
@@ -193,19 +194,19 @@ body {
   padding-bottom: 120px;
 }
 
-.container {
-  width: 1158px;
-  margin: 0 auto;
-  padding: 0 15px;
-}
-
 .header {
   border-bottom: 1px solid #e7e9fc;
 }
 
 .header-container {
   display: flex;
-  padding: 24px 0;
+}
+
+.container {
+  width: 1158px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .navigation {
@@ -218,8 +219,10 @@ body {
   gap: 40px;
 }
 
-.nav-link {
+.nav-link,
+.contact-link {
   display: block;
+  padding: 24px 0;
 }
 
 .contact {
