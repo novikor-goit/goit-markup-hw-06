@@ -124,7 +124,7 @@ body {
   letter-spacing: 0.64px; /* 4% */
   font-weight: 500;
   color: white;
-  text-transform: uppercase;
+  text-transform: capitalize;
   background-color: var(--primaryBrandIris); /* IRIS */
   cursor: pointer;
   line-height: 1.5;
@@ -161,13 +161,26 @@ body {
   background-color: white;
 }
 
+.background-ocean {
+  transition: background-color var(--transform-effect);
+}
+
 .background-ocean:hover,
 .background-ocean:focus {
   background-color: var(--pressedStateOcean); /* OCEAN */
 }
 
-.hover-ocean:hover,
-.hover-ocean:focus {
+.logo:hover {
+  color: currentColor;
+}
+
+.hover,
+.logo {
+  transition: color var(--transform-effect);
+}
+
+.hover:hover,
+.hover:focus {
   color: var(--pressedStateOcean); /* OCEAN */
 }
 
@@ -229,6 +242,10 @@ body {
 
 .header {
   border-bottom: 1px solid #e7e9fc;
+  box-shadow:
+    0 2px 1px rgba(46, 47, 66, 0.08),
+    0 1px 1px rgba(46, 47, 66, 0.16),
+    0 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 .header-container {
@@ -258,6 +275,21 @@ body {
   padding: 24px 0;
 }
 
+.nav-link.active {
+  color: var(--pressedStateOcean);
+  position: relative;
+}
+
+.nav-link.active:after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: var(--pressedStateOcean);
+}
+
 .contact {
   margin-left: auto;
 }
@@ -269,8 +301,19 @@ body {
 
 .hero {
   background-color: var(--darkNavyBlue); /* NAVY BLUE */
+  background-image: linear-gradient(
+      to bottom,
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url(../images/people-office.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  max-width: 1440px;
   text-align: center;
   padding: 188px 0;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .hero-title {
@@ -285,6 +328,10 @@ body {
 .features-list {
   display: flex;
   gap: 24px;
+}
+
+.features-list .title-three {
+  text-align: left;
 }
 
 .features-list-item {
@@ -370,6 +417,14 @@ body {
   color: var(--lightCloud);
   padding: 40px 32px;
   background-color: var(--primaryBrandIris);
+}
+
+.portfolio-list-item:hover {
+  box-shadow: var(--box-shadow);
+}
+
+.portfolio-list-item:hover .overlay {
+  transform: translateY(0);
 }
 
 .footer {
