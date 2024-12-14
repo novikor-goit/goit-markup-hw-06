@@ -2,7 +2,7 @@
   --primaryBrandIris: #4d5ae5; /* IRIS */
   --pressedStateOcean: #404bbf; /* OCEAN */
   --darkNavyBlue: #2e2f42; /* NAVY BLUE */
-  --successGreen: #31d0aa; /* GREEN */
+  --green: #31d0aa; /* GREEN */
   --textSlate: #434455; /* SLATE */
   --lightSlate: #8e8f99; /* LIGHT SLATE */
   --accentCornflower: #e7e9fc; /* CORNFLOWER */
@@ -161,15 +161,6 @@ body {
   background-color: white;
 }
 
-.hover-background {
-  transition: background-color var(--transform-effect);
-}
-
-.hover-background:hover,
-.hover-background:focus {
-  background-color: var(--pressedStateOcean); /* OCEAN */
-}
-
 .logo:hover {
   color: currentColor;
 }
@@ -288,6 +279,7 @@ body {
   width: 100%;
   height: 4px;
   background-color: var(--pressedStateOcean);
+  border-radius: 2px;
 }
 
 .contact {
@@ -306,8 +298,9 @@ body {
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url(../images/people-office.png);
+    url(../images/people-office.jpg);
   background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
   max-width: 1440px;
   text-align: center;
@@ -375,11 +368,14 @@ body {
   justify-content: center;
 }
 
-.social-icon {
+.social-list-item .social-icon {
   width: 40px;
   height: 40px;
   background-color: var(--primaryBrandIris);
   border-radius: 50%;
+}
+
+.fill-cloud {
   fill: var(--lightCloud);
 }
 
@@ -400,6 +396,7 @@ body {
 
 .portfolio-list-item {
   width: calc((100% - 48px) / 3);
+  transition: box-shadow var(--transform-effect);
 }
 
 .portfolio-list-item-content {
@@ -448,8 +445,9 @@ body {
   padding: 0;
 }
 
-.footer-social > p {
+.social-media {
   margin-bottom: 16px;
+  color: #ffffff;
 }
 
 .footer-social-list {
@@ -461,4 +459,19 @@ body {
   width: 40px;
   height: 40px;
   background-color: var(--primaryBrandIris);
+}
+
+.footer .hover-bg:focus,
+.footer .hover-bg:hover {
+  background-color: var(--green);
+}
+
+.hover-bg,
+.hover-bg-ocean {
+  transition: background-color var(--transform-effect);
+}
+
+.hover-bg-ocean:hover,
+.hover-bg-ocean:focus {
+  background-color: var(--pressedStateOcean); /* OCEAN */
 }
