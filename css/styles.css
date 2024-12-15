@@ -586,7 +586,7 @@ body {
 
 .close-button:hover,
 .close-button:focus {
-  background-color: #404bbf;
+  background-color: var(--pressedStateOcean);
   border: none;
   fill: #ffffff;
 }
@@ -645,7 +645,7 @@ body {
   margin-right: 8px;
 }
 
-.checkbox:checked + .terms-label .checkbox-flag {
+.checkbox:checked + .checkbox-label .checkbox-flag {
   background-color: var(--pressedStateOcean);
   border: none;
   fill: var(--lightCloud);
@@ -672,9 +672,8 @@ body {
   border-color: #4d5ae5;
 }
 
-.modal-form .input:focus + .input-icon {
-  fill: #4d5ae5;
-  transition: fill var(--transform-effect);
+.input:focus + .input-icon {
+  fill: var(--primaryBrandIris);
 }
 
 .modal-form .textarea {
