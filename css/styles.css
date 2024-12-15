@@ -586,9 +586,9 @@ body {
 
 .close-button:hover,
 .close-button:focus {
-  background-color: var(--pressedStateOcean);
+  background-color: #404bbf;
   border: none;
-  fill: white;
+  fill: #ffffff;
 }
 
 .close-icon {
@@ -598,7 +598,7 @@ body {
 .modal-title {
   text-align: center;
   margin-bottom: 16px;
-  color: var(--navyBlueModal);
+  color: var(--darkNavyBlue);
 }
 
 .field {
@@ -629,11 +629,6 @@ body {
   margin: 0 auto;
 }
 
-.modal-form .checkbox {
-  margin-bottom: 24px;
-  display: flex;
-}
-
 .modal-form .checkbox-flag {
   width: 16px;
   height: 16px;
@@ -650,7 +645,7 @@ body {
   margin-right: 8px;
 }
 
-input[type="checkbox"]:checked + .terms-label .checkbox-flag {
+.checkbox:checked + .terms-label .checkbox-flag {
   background-color: var(--pressedStateOcean);
   border: none;
   fill: var(--lightCloud);
@@ -674,11 +669,11 @@ input[type="checkbox"]:checked + .terms-label .checkbox-flag {
 }
 
 .input:focus {
-  border-color: var(--primaryBrandIris);
+  border-color: #4d5ae5;
 }
 
 .modal-form .input:focus + .input-icon {
-  fill: var(--primaryBrandIris);
+  fill: #4d5ae5;
   transition: fill var(--transform-effect);
 }
 
@@ -696,5 +691,5 @@ input[type="checkbox"]:checked + .terms-label .checkbox-flag {
 }
 
 .textarea:focus {
-  border-color: var(--primaryBrandIris);
+  border-color: #4d5ae5;
 }
