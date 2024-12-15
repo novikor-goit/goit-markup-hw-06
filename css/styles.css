@@ -1033,6 +1033,7 @@ body {
 .subscription-button .subscription-icon {
   margin-left: 16px;
 }
+
 .footer-social {
   display: block;
   height: 80px;
@@ -1174,10 +1175,9 @@ body {
     0 1px 3px rgba(0, 0, 0, 0.12),
     0 2px 1px rgba(0, 0, 0, 0.2);
   background-color: var(--dairy);
-  width: 408px;
-  min-height: 584px;
+  width: 288px;
   border-radius: 4px;
-  padding: 72px 24px 24px 24px;
+  padding: 72px 16px 24px 16px;
   overflow-y: auto;
   top: 50%;
   left: 50%;
@@ -1241,12 +1241,10 @@ body {
   transition: fill var(--transform-effect);
 }
 
-.terms {
-  margin-bottom: 24px;
-}
-
 .modal-form .button.form-submit {
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 24px;
 }
 
 .modal-form .checkbox-flag {
@@ -1263,6 +1261,14 @@ body {
   justify-content: center;
   fill: transparent;
   margin-right: 8px;
+  flex-shrink: 0;
+}
+
+.checkbox-label {
+  margin-bottom: 24px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
 }
 
 .checkbox:checked + .checkbox-label .checkbox-flag {
@@ -1311,4 +1317,16 @@ body {
 
 .textarea:focus {
   border-color: #4d5ae5;
+}
+
+@media screen and (min-width: 768px) {
+  .modal {
+    width: 408px;
+    height: 584px;
+    padding: 72px 24px 24px 24px;
+  }
+
+  #user-privacy .link {
+    padding: 0;
+  }
 }
