@@ -549,7 +549,10 @@ body {
 
 .modal {
   position: absolute;
-  box-shadow: var(--box-shadow);
+  box-shadow:
+    0 1px 1px rgba(0, 0, 0, 0.14),
+    0 1px 3px rgba(0, 0, 0, 0.12),
+    0 2px 1px rgba(0, 0, 0, 0.2);
   background-color: var(--dairy);
   width: 408px;
   min-height: 584px;
@@ -585,7 +588,7 @@ body {
 .close-button:focus {
   background-color: var(--pressedStateOcean);
   border: none;
-  fill: var(--lightCloud);
+  fill: white;
 }
 
 .close-icon {
@@ -595,13 +598,14 @@ body {
 .modal-title {
   text-align: center;
   margin-bottom: 16px;
+  color: var(--navyBlueModal);
 }
 
 .field {
   margin-bottom: 8px;
 }
 
-.comment-form-field {
+.comment {
   margin-bottom: 16px;
 }
 
@@ -646,7 +650,7 @@ body {
   margin-right: 8px;
 }
 
-#terms-and-conditions:checked + .terms-label .checkbox-flag {
+input[type="checkbox"]:checked + .terms-label .checkbox-flag {
   background-color: var(--pressedStateOcean);
   border: none;
   fill: var(--lightCloud);
@@ -669,7 +673,7 @@ body {
   transition: border-color var(--transform-effect);
 }
 
-.modal-form .input:focus {
+.input:focus {
   border-color: var(--primaryBrandIris);
 }
 
@@ -688,7 +692,9 @@ body {
   resize: none;
   outline: transparent;
   transition: border-color var(--transform-effect);
+  color: rgba(46, 47, 66, 0.4);
 }
-.modal-form .textarea:focus {
+
+.textarea:focus {
   border-color: var(--primaryBrandIris);
 }

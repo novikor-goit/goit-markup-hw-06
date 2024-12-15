@@ -587,7 +587,7 @@
           class="close-button"
           onclick="document.querySelector('.backdrop').classList.remove('active')"
         >
-          <svg width="8" height="8">
+          <svg width="8" height="8" class="close-icon">
             <use href="./images/icons.svg#close"></use>
           </svg>
         </button>
@@ -596,11 +596,11 @@
         </p>
         <form class="modal-form">
           <div class="field">
-            <label for="name" class="label small-text">Name</label>
+            <label for="user-name" class="label small-text">Name</label>
             <div class="input-wrapper">
               <input
                 type="text"
-                id="name"
+                id="user-name"
                 name="user-name"
                 class="input"
                 autofocus
@@ -628,7 +628,7 @@
               </svg>
             </div>
           </div>
-          <div class="field">
+          <div class="field comment">
             <label for="user-comment" class="label small-text">Comment</label>
             <textarea
               id="user-comment"
@@ -639,13 +639,13 @@
           </div>
           <div class="terms">
             <input
-              id="terms-and-conditions"
+              id="user-privacy"
               type="checkbox"
-              name="terms-and-conditions"
+              name="user-privacy"
               value="true"
               class="visually-hidden"
             />
-            <label for="terms-and-conditions" class="terms-label small-text">
+            <label for="user-privacy" class="terms-label small-text">
               <span class="checkbox-flag">
                 <svg width="10" height="8" class="check-icon">
                   <use href="./images/icons.svg#flag"></use>
