@@ -65,7 +65,11 @@
           <h1 class="title hero-title">
             Effective Solutions for Your Business
           </h1>
-          <button type="button" class="button hero-button hover-bg-ocean">
+          <button
+            type="button"
+            class="button hero-button hover-bg-ocean"
+            onclick="document.querySelector('.backdrop').classList.add('active')"
+          >
             Order Service
           </button>
         </div>
@@ -575,5 +579,91 @@
         </div>
       </div>
     </footer>
+
+    <aside class="backdrop">
+      <div class="modal">
+        <button
+          type="button"
+          class="close-button"
+          onclick="document.querySelector('.backdrop').classList.remove('active')"
+        >
+          <svg width="8" height="8">
+            <use href="./images/icons.svg#close"></use>
+          </svg>
+        </button>
+        <p class="modal-title medium-text">
+          Leave your contacts and we will call you back
+        </p>
+        <form class="modal-form">
+          <div class="field">
+            <label for="name" class="label small-text">Name</label>
+            <div class="input-wrapper">
+              <input
+                type="text"
+                id="name"
+                name="user-name"
+                class="input"
+                autofocus
+              />
+              <svg width="18" height="24" class="input-icon">
+                <use href="./images/icons.svg#name"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="field">
+            <label for="phone" class="label small-text">Phone</label>
+            <div class="input-wrapper">
+              <input type="tel" id="phone" name="phone" class="input" />
+              <svg width="18" height="24" class="input-icon">
+                <use href="./images/icons.svg#phone"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="field">
+            <label for="email" class="label small-text">Email</label>
+            <div class="input-wrapper">
+              <input type="email" id="email" name="email" class="input" />
+              <svg width="18" height="24" class="input-icon">
+                <use href="./images/icons.svg#email"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="field">
+            <label for="user-comment" class="label small-text">Comment</label>
+            <textarea
+              id="user-comment"
+              name="user-comment"
+              class="textarea small-text"
+              placeholder="Text input"
+            ></textarea>
+          </div>
+          <div class="terms">
+            <input
+              id="terms-and-conditions"
+              type="checkbox"
+              name="terms-and-conditions"
+              value="true"
+              class="visually-hidden"
+            />
+            <label for="terms-and-conditions" class="terms-label small-text">
+              <span class="checkbox-flag">
+                <svg width="10" height="8" class="check-icon">
+                  <use href="./images/icons.svg#flag"></use>
+                </svg>
+              </span>
+              I accept the terms and conditions of the
+              <a href="#" class="link">Privacy Policy</a>
+            </label>
+          </div>
+          <button
+            type="submit"
+            name="send"
+            class="button hover-bg-ocean form-submit"
+          >
+            Send
+          </button>
+        </form>
+      </div>
+    </aside>
   </body>
 </html>

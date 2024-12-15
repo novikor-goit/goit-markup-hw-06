@@ -7,7 +7,7 @@
   --lightSlate: #8e8f99; /* LIGHT SLATE */
   --accentCornflower: #e7e9fc; /* CORNFLOWER */
   --lightCloud: #f4f4fd; /* CLOUD */
-  --modalOverlayNavyBlueModal: #2e2f47; /* NAVY BLUE MODAL */
+  --navyBlueModal: #2e2f4266; /* NAVY BLUE MODAL */
   --grey: #2e2f47; /* GREY */
   --dairy: #fcfcfc; /* DAIRY */
   --box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
@@ -110,6 +110,7 @@ body {
 }
 
 .small-text {
+  font-weight: 400;
   font-size: 12px;
   line-height: 1.17; /* 14px / 12px */
   letter-spacing: 0.48px; /* 4% */
@@ -125,9 +126,9 @@ body {
   font-weight: 500;
   color: white;
   text-transform: capitalize;
+  text-align: center;
   background-color: var(--primaryBrandIris); /* IRIS */
   cursor: pointer;
-  line-height: 1.5;
   display: block;
   min-width: 169px;
   border-radius: 4px;
@@ -520,3 +521,174 @@ body {
 }
 
 /* Footer subscription block end */
+/* Backdrop styles */
+.backdrop {
+  background-color: var(--navyBlueModal);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition:
+    opacity var(--transform-effect),
+    visibility var(--transform-effect);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.backdrop.active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.modal {
+  position: absolute;
+  box-shadow: var(--box-shadow);
+  background-color: var(--dairy);
+  width: 408px;
+  min-height: 584px;
+  border-radius: 4px;
+  padding: 72px 24px 24px 24px;
+  overflow-y: auto;
+  top: 50%;
+  left: 50%;
+  transition: transform var(--transform-effect);
+  transform: translate(-50%, -50%);
+}
+
+.close-button {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: var(--accentCornflower);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  transition:
+    background-color var(--transform-effect),
+    border var(--transform-effect);
+}
+
+.close-button:hover,
+.close-button:focus {
+  background-color: var(--pressedStateOcean);
+  border: none;
+  fill: var(--lightCloud);
+}
+
+.close-icon {
+  transition: fill var(--transform-effect);
+}
+
+.modal-title {
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.field {
+  margin-bottom: 8px;
+}
+
+.comment-form-field {
+  margin-bottom: 16px;
+}
+
+.input-wrapper {
+  position: relative;
+}
+
+.input-icon {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: fill var(--transform-effect);
+}
+
+.terms {
+  margin-bottom: 24px;
+}
+
+.modal-form .button.form-submit {
+  margin: 0 auto;
+}
+
+.modal-form .checkbox {
+  margin-bottom: 24px;
+  display: flex;
+}
+
+.modal-form .checkbox-flag {
+  width: 16px;
+  height: 16px;
+  border: 1px solid var(--navyBlueModal);
+  border-radius: 2px;
+  transition:
+    background-color var(--transform-effect),
+    border var(--transform-effect),
+    fill var(--transform-effect);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  fill: transparent;
+  margin-right: 8px;
+}
+
+#terms-and-conditions:checked + .terms-label .checkbox-flag {
+  background-color: var(--pressedStateOcean);
+  border: none;
+  fill: var(--lightCloud);
+}
+
+.modal-form .label {
+  display: block;
+  font-weight: 400;
+  margin-bottom: 4px;
+}
+
+.modal-form .input {
+  border: 1px solid var(--navyBlueModal);
+  border-radius: 4px;
+  width: 100%;
+  height: 40px;
+  background-color: transparent;
+  padding-left: 38px;
+  outline: transparent;
+  transition: border-color var(--transform-effect);
+}
+
+.modal-form .input:focus {
+  border-color: var(--primaryBrandIris);
+}
+
+.modal-form .input:focus + .input-icon {
+  fill: var(--primaryBrandIris);
+  transition: fill var(--transform-effect);
+}
+
+.modal-form .textarea {
+  width: 100%;
+  height: 120px;
+  padding: 8px 16px;
+  border: 1px solid var(--navyBlueModal);
+  border-radius: 4px;
+  background-color: transparent;
+  resize: none;
+  outline: transparent;
+  transition: border-color var(--transform-effect);
+}
+.modal-form .textarea:focus {
+  border-color: var(--primaryBrandIris);
+}
